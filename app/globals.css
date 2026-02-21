@@ -120,6 +120,13 @@ main {
   backdrop-filter: blur(8px);
 }
 
+.surface-card-muted {
+  background: linear-gradient(152deg, rgba(248, 241, 226, 0.78), rgba(241, 232, 214, 0.72));
+  border-color: rgba(33, 42, 68, 0.13);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  backdrop-filter: none;
+}
+
 .inset-card {
   border-radius: 0.95rem;
   border: 1px solid rgba(33, 42, 68, 0.14);

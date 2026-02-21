@@ -492,7 +492,7 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
   return (
     <PageTransition>
       <section className="mx-auto grid max-w-4xl gap-6 pb-12 pt-4">
-        <header className="surface-card p-5 sm:p-7">
+        <header className="surface-card surface-card-muted p-5 sm:p-7">
           <p className="metric-label">Assessment Track</p>
           <h1 className="mt-2 text-3xl tracking-tight text-textPrimary sm:text-4xl">PM Persona Assessment</h1>
         </header>
@@ -553,33 +553,6 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
           </section>
         ) : (
           <>
-            <section className="surface-card p-5 sm:p-6">
-              <div className="flex items-center justify-between text-sm text-textSecondary">
-                <span className="metric-label">Progress</span>
-                <span className="tabular-nums font-medium text-textPrimary">
-                  {Math.min(currentIndex + 1, questions.length)}/{questions.length}
-                </span>
-              </div>
-              <div className="progress-track">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${progressPercent}%` }}
-                />
-              </div>
-              <div className="mt-2 flex items-center justify-between text-xs text-textSecondary sm:text-sm">
-                <span>{Object.keys(answers).length} answered</span>
-              </div>
-            </section>
-
-            {error ? (
-              <section className="surface-card p-4">
-                <p className="status-note" data-tone="warning">{error}</p>
-                <button type="button" className="secondary-button mt-3" onClick={retrySync}>
-                  Retry sync
-                </button>
-              </section>
-            ) : null}
-
             <AnimatePresence mode="wait">
               {activeQuestion ? (
                 <motion.section
@@ -639,9 +612,36 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
               ) : null}
             </AnimatePresence>
 
+            {error ? (
+              <section className="surface-card p-4">
+                <p className="status-note" data-tone="warning">{error}</p>
+                <button type="button" className="secondary-button mt-3" onClick={retrySync}>
+                  Retry sync
+                </button>
+              </section>
+            ) : null}
+
             {isCompleting ? (
               <section className="surface-card p-4 text-sm text-textSecondary">Calculating your persona result…</section>
             ) : null}
+
+            <section className="surface-card surface-card-muted p-5 sm:p-6">
+              <div className="flex items-center justify-between text-sm text-textSecondary">
+                <span className="metric-label">Progress</span>
+                <span className="tabular-nums font-medium text-textPrimary">
+                  {Math.min(currentIndex + 1, questions.length)}/{questions.length}
+                </span>
+              </div>
+              <div className="progress-track">
+                <div
+                  className="progress-fill"
+                  style={{ width: `${progressPercent}%` }}
+                />
+              </div>
+              <div className="mt-2 flex items-center justify-between text-xs text-textSecondary sm:text-sm">
+                <span>{Object.keys(answers).length} answered</span>
+              </div>
+            </section>
           </>
         )}
       </section>
