@@ -337,6 +337,329 @@ main {
   opacity: 0.7;
 }
 
+.share-story-shell {
+  isolation: isolate;
+  width: min(100%, 440px);
+  min-height: clamp(540px, 68vh, 720px);
+  border-radius: 2rem;
+  border-color: rgba(95, 125, 198, 0.6);
+  box-shadow:
+    0 44px 94px rgba(8, 13, 28, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transition: transform 260ms ease, border-color 240ms ease, box-shadow 280ms ease;
+}
+
+.share-story-shell::before {
+  opacity: 0.3;
+  transition: opacity 260ms ease;
+}
+
+.share-story-shell::after {
+  opacity: 0.56;
+  transition: opacity 260ms ease;
+}
+
+.share-story-lights {
+  position: absolute;
+  inset: -12%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(42px);
+  opacity: 0.78;
+  transition: opacity 260ms ease, filter 300ms ease;
+}
+
+.share-story-orb {
+  position: absolute;
+  border-radius: 999px;
+  mix-blend-mode: screen;
+  animation: shareOrbFloat 18s ease-in-out infinite;
+}
+
+.share-story-orb-one {
+  top: 2%;
+  left: -8%;
+  width: 52%;
+  height: 52%;
+  background: radial-gradient(circle at center, rgba(121, 170, 255, 0.46), transparent 70%);
+}
+
+.share-story-orb-two {
+  right: -10%;
+  bottom: -8%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle at center, rgba(255, 173, 118, 0.34), transparent 72%);
+  animation-delay: -6s;
+}
+
+.share-story-orb-three {
+  top: 34%;
+  right: 24%;
+  width: 34%;
+  height: 34%;
+  background: radial-gradient(circle at center, rgba(145, 202, 255, 0.34), transparent 74%);
+  animation-delay: -12s;
+}
+
+.share-story-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.share-story-particles span {
+  position: absolute;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at center, rgba(197, 224, 255, 0.96), rgba(180, 210, 255, 0.24) 62%, transparent 100%);
+  opacity: 0;
+  animation: shareSparkle 7.2s linear infinite;
+}
+
+.share-story-particles span:nth-child(1) {
+  top: 13%;
+  left: 9%;
+  animation-delay: -0.9s;
+}
+
+.share-story-particles span:nth-child(2) {
+  top: 23%;
+  left: 37%;
+  animation-delay: -2.4s;
+}
+
+.share-story-particles span:nth-child(3) {
+  top: 10%;
+  right: 17%;
+  animation-delay: -1.2s;
+}
+
+.share-story-particles span:nth-child(4) {
+  top: 38%;
+  left: 63%;
+  animation-delay: -3.2s;
+}
+
+.share-story-particles span:nth-child(5) {
+  top: 56%;
+  left: 22%;
+  animation-delay: -4.6s;
+}
+
+.share-story-particles span:nth-child(6) {
+  top: 68%;
+  left: 54%;
+  animation-delay: -1.7s;
+}
+
+.share-story-particles span:nth-child(7) {
+  top: 78%;
+  left: 74%;
+  animation-delay: -5.1s;
+}
+
+.share-story-particles span:nth-child(8) {
+  top: 46%;
+  right: 10%;
+  animation-delay: -6.4s;
+}
+
+.share-story-particles span:nth-child(9) {
+  top: 30%;
+  right: 34%;
+  animation-delay: -2.8s;
+}
+
+.share-story-particles span:nth-child(10) {
+  bottom: 18%;
+  left: 36%;
+  animation-delay: -3.7s;
+}
+
+.share-story-particles span:nth-child(11) {
+  bottom: 11%;
+  right: 18%;
+  animation-delay: -4.9s;
+}
+
+.share-story-particles span:nth-child(12) {
+  bottom: 26%;
+  right: 42%;
+  animation-delay: -0.5s;
+}
+
+.share-story-content {
+  position: relative;
+  background: none;
+  padding: clamp(1rem, 2.4vw, 1.6rem);
+  transition: transform 260ms ease;
+}
+
+.share-story-title {
+  text-shadow: 0 12px 36px rgba(96, 141, 240, 0.24);
+  transition: text-shadow 260ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .share-story-shell:hover {
+    transform: translateY(-4px) scale(1.008);
+    border-color: rgba(121, 151, 224, 0.84);
+    box-shadow:
+      0 56px 112px rgba(8, 13, 28, 0.68),
+      inset 0 1px 0 rgba(255, 255, 255, 0.24),
+      0 0 0 1px rgba(138, 167, 239, 0.18);
+  }
+
+  .share-story-shell:hover::before {
+    opacity: 0.4;
+  }
+
+  .share-story-shell:hover::after {
+    opacity: 0.64;
+  }
+
+  .share-story-shell:hover .share-story-lights {
+    opacity: 0.96;
+    filter: blur(36px) saturate(1.1);
+  }
+
+  .share-story-shell:hover .share-story-content {
+    transform: translateY(-1px);
+  }
+
+  .share-story-shell:hover .share-story-title {
+    text-shadow: 0 16px 44px rgba(112, 156, 248, 0.36);
+  }
+
+  .share-story-shell:hover .share-story-particles span {
+    animation-duration: 5.9s;
+  }
+}
+
+.share-cta-card {
+  border-color: rgba(27, 38, 66, 0.2);
+  box-shadow: 0 24px 52px rgba(20, 24, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  display: grid;
+  gap: 0.95rem;
+  align-content: start;
+}
+
+.share-cta-title {
+  max-width: none;
+  margin: 0;
+  font-family: var(--font-ui), sans-serif;
+  font-weight: 620;
+  font-size: clamp(1.56rem, 1.34rem + 0.68vw, 1.82rem);
+  line-height: 1.16;
+  letter-spacing: -0.014em;
+  text-wrap: pretty;
+}
+
+.share-cta-copy {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(1rem, 0.96rem + 0.16vw, 1.08rem);
+  line-height: 1.42;
+  white-space: nowrap;
+}
+
+.share-cta-actions {
+  margin-top: 0.35rem;
+  display: flex;
+}
+
+.share-cta-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.98rem;
+  min-height: 50px;
+  padding: 0.72rem 1.16rem;
+  font-size: 1.02rem;
+  font-weight: 650;
+  letter-spacing: 0.006em;
+  background: linear-gradient(112deg, #325fd0 0%, #4a70dd 58%, #6285ef 100%);
+  box-shadow:
+    0 12px 24px rgba(56, 93, 206, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    inset 0 0 0 1px rgba(164, 189, 255, 0.24);
+}
+
+.share-cta-button::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  bottom: -120%;
+  left: -24%;
+  width: 42%;
+  transform: rotate(18deg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: transform 300ms ease, opacity 220ms ease;
+}
+
+.share-cta-button::after {
+  content: "→";
+  margin-left: 0.46rem;
+  font-size: 1.02em;
+  opacity: 0.92;
+  transition: transform 200ms ease;
+}
+
+.share-cta-button:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.05) brightness(1.01);
+  box-shadow:
+    0 15px 28px rgba(56, 93, 206, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 0 0 1px rgba(180, 202, 255, 0.3);
+}
+
+.share-cta-button:hover::before {
+  opacity: 1;
+  transform: translateX(240%) rotate(18deg);
+}
+
+.share-cta-button:hover::after {
+  transform: translateX(2px);
+}
+
+@keyframes shareOrbFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-2.5%, 2.8%, 0) scale(1.06);
+  }
+
+  100% {
+    transform: translate3d(2.4%, -2.2%, 0) scale(1.02);
+  }
+}
+
+@keyframes shareSparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.55) translateY(8px);
+  }
+
+  12% {
+    opacity: 0.95;
+  }
+
+  40% {
+    opacity: 0.78;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.18) translateY(-10px);
+  }
+}
+
 .story-progress {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -561,6 +884,20 @@ main {
 }
 
 @media (max-width: 640px) {
+  .share-story-content {
+    padding: 0.86rem;
+  }
+
+  .share-cta-button {
+    font-size: 0.98rem;
+    min-height: 48px;
+    padding: 0.68rem 1.05rem;
+  }
+
+  .share-cta-copy {
+    white-space: normal;
+  }
+
   .story-share-card {
     min-height: 360px;
     padding: 0.86rem;
@@ -585,5 +922,20 @@ main {
   .primary-button:hover,
   .secondary-button:hover {
     transform: none;
+  }
+
+  .share-story-shell:hover,
+  .share-story-shell:hover .share-story-content {
+    transform: none;
+  }
+
+  .share-story-orb,
+  .share-story-particles span {
+    animation: none !important;
+    opacity: 0.22;
+  }
+
+  .share-cta-button::before {
+    display: none;
   }
 }

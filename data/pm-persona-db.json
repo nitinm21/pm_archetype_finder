@@ -74,11 +74,11 @@
       "id": "d91df3ca-fe2b-4920-9558-3f62f579595f",
       "track": "b2b",
       "startedAt": "2026-02-21T22:05:48.603Z",
-      "completedAt": null,
+      "completedAt": "2026-02-21T22:22:32.690Z",
       "archivedAt": null,
       "source": "web",
       "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "status": "in_progress"
+      "status": "completed"
     }
   },
   "answers": {
@@ -591,7 +591,7 @@
         "mappedDimension": "d1",
         "mappedSide": "delivery",
         "weightApplied": 1,
-        "createdAt": "2026-02-21T22:05:50.316Z"
+        "createdAt": "2026-02-21T22:22:32.251Z"
       },
       "q2": {
         "questionId": "q2",
@@ -599,7 +599,71 @@
         "mappedDimension": "d2",
         "mappedSide": "strategic",
         "weightApplied": 1,
-        "createdAt": "2026-02-21T22:05:52.133Z"
+        "createdAt": "2026-02-21T22:22:32.264Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:22:32.273Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:22:32.280Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T22:22:32.286Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T22:22:32.291Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:22:32.297Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:22:32.304Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:22:32.309Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T22:22:32.315Z"
       }
     }
   },
@@ -1125,6 +1189,93 @@
         "confidence": 70,
         "confidenceBand": "Medium"
       }
+    },
+    "d91df3ca-fe2b-4920-9558-3f62f579595f": {
+      "sessionId": "d91df3ca-fe2b-4920-9558-3f62f579595f",
+      "track": "b2b",
+      "personaId": "b2b_insight_architect",
+      "dimensionWinners": {
+        "d1": "discovery",
+        "d2": "strategic",
+        "d3": "facilitator"
+      },
+      "confidence": 77,
+      "createdAt": "2026-02-21T22:22:32.690Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_insight_architect",
+          "track": "b2b",
+          "name": "Insight Architect",
+          "summary": "You thrive when ambiguity is high and strategic clarity must be built from real customer evidence.",
+          "strengths": [
+            "Uncovers root customer problems early",
+            "Connects qualitative signals to strategic bets",
+            "Aligns teams with shared decision criteria",
+            "Reduces rework through upfront validation"
+          ],
+          "dimensions": {
+            "d1": "discovery",
+            "d2": "strategic",
+            "d3": "facilitator"
+          },
+          "dimensionLabels": {
+            "d1": "Discovery",
+            "d2": "Strategic",
+            "d3": "Facilitator"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "discovery",
+            "scores": {
+              "discovery": 4,
+              "delivery": 1
+            },
+            "percentages": {
+              "discovery": 80,
+              "delivery": 20
+            },
+            "certainty": 80,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "strategic",
+            "scores": {
+              "strategic": 3,
+              "tactical": 1
+            },
+            "percentages": {
+              "strategic": 75,
+              "tactical": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "facilitator",
+            "scores": {
+              "facilitator": 3,
+              "decider": 1
+            },
+            "percentages": {
+              "facilitator": 75,
+              "decider": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          }
+        },
+        "confidence": 77,
+        "confidenceBand": "Medium"
+      }
     }
   },
   "shares": {
@@ -1139,6 +1290,12 @@
       "sessionId": "bc626dcc-18ff-49a8-8818-24db5e0c65cd",
       "createdAt": "2026-02-21T21:05:32.965Z",
       "views": 0
+    },
+    "rVdwh9qyJnq": {
+      "slug": "rVdwh9qyJnq",
+      "sessionId": "d91df3ca-fe2b-4920-9558-3f62f579595f",
+      "createdAt": "2026-02-21T22:22:35.832Z",
+      "views": 28
     }
   }
 }

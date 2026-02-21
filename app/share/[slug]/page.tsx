@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
-import { PersonaStoryCard } from "@/components/persona-story-card";
 import { formatTrackLabel } from "@/lib/format";
 import type { ResultRecord, SessionRecord, ShareRecord } from "@/lib/types";
 
@@ -77,17 +76,32 @@ export default function SharePage({ params }: SharePageProps) {
   return (
     <PageTransition>
       <motion.section
-        className="mx-auto grid max-w-6xl gap-6 pb-12 pt-4"
+        className="mx-auto grid w-full max-w-6xl justify-items-center gap-6 pb-12 pt-4 lg:grid-cols-[440px_minmax(0,1fr)] lg:items-start lg:justify-items-stretch"
         initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: reducedMotion ? 0.14 : 0.42, ease: [0.2, 0.8, 0.2, 1] }}
       >
-        <section className="story-shell p-5 sm:p-7">
-          <div className="relative z-10 grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
-            <div>
-              <p className="story-kicker">Shared PM Persona Story</p>
+        <section className="story-shell share-story-shell w-full p-5 sm:p-6 lg:justify-self-start">
+          <div className="share-story-lights" aria-hidden>
+            <span className="share-story-orb share-story-orb-one" />
+            <span className="share-story-orb share-story-orb-two" />
+            <span className="share-story-orb share-story-orb-three" />
+          </div>
+
+          <div className="share-story-particles" aria-hidden>
+            {Array.from({ length: 12 }).map((_, index) => (
+              <span key={index} />
+            ))}
+          </div>
+
+          <div className="relative z-10">
+            <div className="share-story-content max-w-4xl">
+              <h1 className="max-w-xl text-3xl font-semibold tracking-tight text-[#f2f5ff] sm:text-4xl">
+                Here&apos;s my persona
+              </h1>
               <p className="story-plain-track mt-4">{trackLabel}</p>
-              <h1 className="story-title">{persona.name}</h1>
+
+              <h2 className="story-title share-story-title">{persona.name}</h2>
               <p className="story-copy">{persona.summary}</p>
 
               <p className="story-kicker mt-6">Core Strengths</p>
@@ -98,22 +112,24 @@ export default function SharePage({ params }: SharePageProps) {
                   </li>
                 ))}
               </ul>
-
-              <p className="mt-5 text-sm text-[#d3e0ff]">Opened {data.share.views.toLocaleString()} times</p>
             </div>
-
-            <PersonaStoryCard
-              personaName={persona.name}
-              summary={persona.summary}
-              strengths={persona.strengths}
-              trackLabel={trackLabel}
-            />
           </div>
         </section>
 
-        <section className="surface-card p-5 sm:p-6">
-          <div className="flex flex-wrap gap-3">
-            <Link href="/" className="primary-button inline-flex items-center justify-center">
+        <section className="surface-card share-cta-card w-full p-5 sm:p-6 lg:max-w-[520px] lg:justify-self-end lg:sticky lg:top-6 lg:self-start">
+          <h2 className="share-cta-title text-textPrimary">
+            Want to know what kind of Product Manager you are?
+          </h2>
+          <p className="share-cta-copy text-textSecondary">
+            Take the assessment to discover your PM archetype!
+          </p>
+          <div className="share-cta-actions">
+            <Link
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button share-cta-button inline-flex items-center justify-center"
+            >
               Take the assessment
             </Link>
           </div>
