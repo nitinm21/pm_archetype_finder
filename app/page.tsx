@@ -65,10 +65,10 @@ export default function HomePage() {
         transition={transitions.transition}
       >
         <header className="space-y-6">
-          <h1 className="display-heading max-w-4xl text-[3rem] text-textPrimary sm:text-[4.5rem] lg:text-[5.9rem]">
+          <h1 className="display-heading text-[3rem] text-textPrimary sm:text-[4.1rem] lg:text-[4.45rem] xl:whitespace-nowrap">
             Product Manager Persona Finder.
           </h1>
-          <p className="max-w-2xl text-base text-textSecondary sm:text-lg">
+          <p className="max-w-2xl text-base text-textSecondary sm:text-lg xl:max-w-none xl:whitespace-nowrap">
             A short, scenario-based assessment that reveals your operating style in product decision-making.
           </p>
         </header>
