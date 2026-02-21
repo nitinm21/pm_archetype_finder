@@ -81,7 +81,7 @@ export function PersonaStoryCard({ personaName, summary, strengths, trackLabel, 
     <article className={`story-share-card ${compact ? "story-share-card-compact" : ""}`}>
       <div className="story-share-card-aura" style={{ background: theme.aura }} />
       <header className="story-share-card-head">
-        <span className="story-share-card-mark">PM Persona Story</span>
+        <span className="story-share-card-mark">PM Persona Result</span>
         <span className="story-share-card-glyph" aria-hidden>
           {glyph}
         </span>

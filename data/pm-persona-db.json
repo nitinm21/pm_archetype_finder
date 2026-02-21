@@ -79,6 +79,16 @@
       "source": "web",
       "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
       "status": "completed"
+    },
+    "c31ecce3-ba8a-493f-98e3-bac124e6f584": {
+      "id": "c31ecce3-ba8a-493f-98e3-bac124e6f584",
+      "track": "b2b",
+      "startedAt": "2026-02-21T23:22:25.233Z",
+      "completedAt": "2026-02-21T23:28:04.624Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
     }
   },
   "answers": {
@@ -664,6 +674,88 @@
         "mappedSide": "discovery",
         "weightApplied": 2,
         "createdAt": "2026-02-21T22:22:32.315Z"
+      }
+    },
+    "c31ecce3-ba8a-493f-98e3-bac124e6f584": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.327Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.348Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.361Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.373Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T23:28:04.382Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T23:28:04.391Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.400Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.409Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T23:28:04.418Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T23:28:04.427Z"
       }
     }
   },
@@ -1276,6 +1368,93 @@
         "confidence": 77,
         "confidenceBand": "Medium"
       }
+    },
+    "c31ecce3-ba8a-493f-98e3-bac124e6f584": {
+      "sessionId": "c31ecce3-ba8a-493f-98e3-bac124e6f584",
+      "track": "b2b",
+      "personaId": "b2b_delivery_integrator",
+      "dimensionWinners": {
+        "d1": "delivery",
+        "d2": "tactical",
+        "d3": "facilitator"
+      },
+      "confidence": 85,
+      "createdAt": "2026-02-21T23:28:04.624Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_delivery_integrator",
+          "track": "b2b",
+          "name": "Delivery Integrator",
+          "summary": "You excel at orchestrating dependable execution across moving parts while protecting launch quality.",
+          "strengths": [
+            "Orchestrates reliable cross-team delivery",
+            "De-risks launches with clear planning",
+            "Keeps timeline, quality, and expectations aligned",
+            "Maintains strong operational follow-through"
+          ],
+          "dimensions": {
+            "d1": "delivery",
+            "d2": "tactical",
+            "d3": "facilitator"
+          },
+          "dimensionLabels": {
+            "d1": "Delivery",
+            "d2": "Tactical",
+            "d3": "Facilitator"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "delivery",
+            "scores": {
+              "discovery": 0,
+              "delivery": 5
+            },
+            "percentages": {
+              "discovery": 0,
+              "delivery": 100
+            },
+            "certainty": 100,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "tactical",
+            "scores": {
+              "strategic": 1,
+              "tactical": 3
+            },
+            "percentages": {
+              "strategic": 25,
+              "tactical": 75
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "facilitator",
+            "scores": {
+              "facilitator": 3,
+              "decider": 1
+            },
+            "percentages": {
+              "facilitator": 75,
+              "decider": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          }
+        },
+        "confidence": 85,
+        "confidenceBand": "High"
+      }
     }
   },
   "shares": {
@@ -1296,6 +1475,12 @@
       "sessionId": "d91df3ca-fe2b-4920-9558-3f62f579595f",
       "createdAt": "2026-02-21T22:22:35.832Z",
       "views": 28
+    },
+    "9UFDS9Aqps4": {
+      "slug": "9UFDS9Aqps4",
+      "sessionId": "d91df3ca-fe2b-4920-9558-3f62f579595f",
+      "createdAt": "2026-02-21T23:30:01.868Z",
+      "views": 0
     }
   }
 }

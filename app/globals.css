@@ -503,6 +503,20 @@ main {
   transition: text-shadow 260ms ease;
 }
 
+.result-story-shell {
+  width: 100%;
+  min-height: clamp(520px, 66vh, 700px);
+  border-radius: 1.8rem;
+}
+
+.result-story-shell .share-story-content {
+  max-width: 52rem;
+}
+
+.result-story-shell .story-strength-list {
+  max-width: 40rem;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .share-story-shell:hover {
     transform: translateY(-4px) scale(1.008);
@@ -624,6 +638,37 @@ main {
 
 .share-cta-button:hover::after {
   transform: translateX(2px);
+}
+
+.result-share-card {
+  gap: 1rem;
+}
+
+.result-share-copy {
+  white-space: normal;
+  line-height: 1.46;
+}
+
+.result-share-actions {
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.result-share-actions .secondary-button {
+  min-height: 50px;
+}
+
+.result-share-status {
+  min-height: 1.2rem;
+  margin: 0;
+}
+
+.result-share-link {
+  margin-top: -0.16rem;
+}
+
+.result-share-card .status-note {
+  margin-top: 0.2rem;
 }
 
 @keyframes shareOrbFloat {
@@ -888,6 +933,10 @@ main {
     padding: 0.86rem;
   }
 
+  .result-story-shell {
+    min-height: auto;
+  }
+
   .share-cta-button {
     font-size: 0.98rem;
     min-height: 48px;
@@ -905,6 +954,10 @@ main {
 
   .story-share-card-compact {
     min-height: 320px;
+  }
+
+  .result-share-actions > * {
+    width: 100%;
   }
 }
 

@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState, type MouseEvent } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
-import { PersonaStoryCard } from "@/components/persona-story-card";
 import { trackEvent } from "@/lib/analytics-client";
 import { formatTrackLabel } from "@/lib/format";
 import { setStoredSelectedTrack } from "@/lib/session-client";
@@ -22,9 +21,7 @@ interface ResultResponse {
   result: ResultRecord;
 }
 
-type ShareState = "idle" | "creating" | "copied" | "shared";
-
-const STORY_STEPS = 3;
+type ShareState = "idle" | "creating" | "copied";
 
 async function copyToClipboard(value: string) {
   if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
@@ -42,7 +39,6 @@ export default function ResultPage({ params }: ResultPageProps) {
 
   const [shareUrl, setShareUrl] = useState<string | null>(null);
   const [shareState, setShareState] = useState<ShareState>("idle");
-  const [storyStep, setStoryStep] = useState(0);
 
   useEffect(() => {
     const run = async () => {
@@ -72,27 +68,6 @@ export default function ResultPage({ params }: ResultPageProps) {
 
     void run();
   }, [params.sessionId]);
-
-  useEffect(() => {
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) {
-        return;
-      }
-
-      if (event.key === "ArrowRight") {
-        event.preventDefault();
-        setStoryStep((current) => Math.min(current + 1, STORY_STEPS - 1));
-      }
-
-      if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        setStoryStep((current) => Math.max(current - 1, 0));
-      }
-    };
-
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
 
   const ensureShareUrl = async () => {
     if (!data) {
@@ -150,14 +125,22 @@ export default function ResultPage({ params }: ResultPageProps) {
     }
 
     if (shareState === "copied") {
-      return "Share link copied";
+      return "Share Link Copied";
     }
 
-    if (shareState === "shared") {
-      return "Shared";
+    return "Copy Public Share Link";
+  }, [shareState]);
+
+  const shareStatusMessage = useMemo(() => {
+    if (shareState === "creating") {
+      return "Preparing your public share link…";
     }
 
-    return "Copy public share link";
+    if (shareState === "copied") {
+      return "Public share link copied to clipboard.";
+    }
+
+    return "";
   }, [shareState]);
 
   if (loading) {
@@ -179,7 +162,7 @@ export default function ResultPage({ params }: ResultPageProps) {
               Retry
             </button>
             <Link href="/" className="primary-button inline-flex items-center justify-center">
-              Back to home
+              Back to Home
             </Link>
           </div>
         </section>
@@ -191,125 +174,76 @@ export default function ResultPage({ params }: ResultPageProps) {
   const trackLabel = formatTrackLabel(session.track);
   const persona = result.computed.persona;
 
-  const goPrevious = () => {
-    setStoryStep((current) => Math.max(current - 1, 0));
-  };
-
-  const goNext = () => {
-    setStoryStep((current) => Math.min(current + 1, STORY_STEPS - 1));
-  };
-
-  const onStoryStageClick = (event: MouseEvent<HTMLElement>) => {
-    const target = event.target as HTMLElement;
-
-    if (target.closest("button, a")) {
-      return;
-    }
-
-    const bounds = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - bounds.left;
-
-    if (x < bounds.width * 0.35) {
-      goPrevious();
-      return;
-    }
-
-    goNext();
-  };
-
   return (
     <PageTransition>
       <motion.section
-        className="mx-auto grid max-w-6xl gap-6 pb-12 pt-4"
+        className="mx-auto grid w-full max-w-6xl gap-6 pb-12 pt-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start"
         initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: reducedMotion ? 0.14 : 0.42, ease: [0.2, 0.8, 0.2, 1] }}
       >
-        <header className="space-y-2">
+        <header className="space-y-2 lg:col-span-2">
           <p className="metric-label">Persona Result</p>
-          <p className="text-sm text-textSecondary sm:text-base">Generated from your {trackLabel} responses.</p>
         </header>
 
-        <section className="story-shell p-5 sm:p-7" onClick={onStoryStageClick}>
+        <section className="story-shell share-story-shell result-story-shell w-full p-5 sm:p-6">
+          <div className="share-story-lights" aria-hidden>
+            <span className="share-story-orb share-story-orb-one" />
+            <span className="share-story-orb share-story-orb-two" />
+            <span className="share-story-orb share-story-orb-three" />
+          </div>
+
+          <div className="share-story-particles" aria-hidden>
+            {Array.from({ length: 12 }).map((_, index) => (
+              <span key={index} />
+            ))}
+          </div>
+
           <div className="relative z-10">
-            <div className="space-y-4">
-              <p className="story-kicker">Wrapped Story</p>
-              <div className="story-progress" aria-label="Result story progress">
-                {Array.from({ length: STORY_STEPS }).map((_, index) => (
-                  <span key={index} className="story-progress-segment" data-active={index <= storyStep} />
+            <div className="share-story-content max-w-4xl">
+              <p className="story-kicker">PM Persona</p>
+              <p className="story-plain-track mt-4">{trackLabel}</p>
+
+              <h1 className="story-title share-story-title">{persona.name}</h1>
+              <p className="story-copy">{persona.summary}</p>
+
+              <h2 className="story-kicker mt-7">Core Strengths</h2>
+              <ul className="story-strength-list">
+                {persona.strengths.map((strength) => (
+                  <li key={strength} className="story-strength-item">
+                    {strength}
+                  </li>
                 ))}
-              </div>
-              <p className="text-xs text-[#c7d6fb]">Tap left or right to move through the story.</p>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <aside className="grid w-full gap-4 lg:sticky lg:top-6 lg:self-start">
+          <section className="surface-card share-cta-card result-share-card w-full p-5 sm:p-6" aria-labelledby="share-result-title">
+            <h2 id="share-result-title" className="share-cta-title text-textPrimary">
+              Share Your Persona Result
+            </h2>
+            <p className="share-cta-copy result-share-copy text-textSecondary">
+              Copy your public link and share it in Slack, LinkedIn, X, or anywhere your team collaborates.
+            </p>
+
+            <div className="share-cta-actions result-share-actions">
+              <button type="button" className="primary-button share-cta-button inline-flex items-center justify-center" onClick={onCopyShareLink} disabled={shareState === "creating"}>
+                {shareStateLabel}
+              </button>
+              <Link href="/" className="secondary-button inline-flex items-center justify-center">
+                Go Home
+              </Link>
             </div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={storyStep}
-                className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]"
-                initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -10 }}
-                transition={{ duration: reducedMotion ? 0.14 : 0.28, ease: [0.2, 0.8, 0.2, 1] }}
-              >
-                <div>
-                  {storyStep === 0 ? (
-                    <>
-                      <p className="story-plain-track">{trackLabel}</p>
-                      <h1 className="story-title">{persona.name}</h1>
-                      <p className="story-copy">{persona.summary}</p>
-                    </>
-                  ) : null}
-
-                  {storyStep === 1 ? (
-                    <>
-                      <p className="story-kicker">How You Show Up</p>
-                      <h2 className="story-title">Core Strengths</h2>
-                      <p className="story-copy">These patterns came through most clearly in your responses.</p>
-                      <ul className="story-strength-list">
-                        {persona.strengths.map((strength) => (
-                          <li key={strength} className="story-strength-item">
-                            {strength}
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : null}
-
-                  {storyStep === 2 ? (
-                    <>
-                      <p className="story-kicker">Share It</p>
-                      <h2 className="story-title">Send Your PM Story</h2>
-                      <p className="story-copy">Copy your link below and drop it in Slack, X, LinkedIn, or anywhere your team hangs out.</p>
-                    </>
-                  ) : null}
-                </div>
-
-                <PersonaStoryCard
-                  personaName={persona.name}
-                  summary={persona.summary}
-                  strengths={persona.strengths}
-                  trackLabel={trackLabel}
-                  compact={storyStep !== 2}
-                />
-              </motion.div>
-            </AnimatePresence>
-
-          </div>
-        </section>
-
-        {error ? <p className="status-note" data-tone="warning">{error}</p> : null}
-
-        <section className="surface-card p-5 sm:p-6">
-          <div className="flex flex-wrap gap-3">
-            <button type="button" className="primary-button" onClick={onCopyShareLink} disabled={shareState === "creating"}>
-              {shareStateLabel}
-            </button>
-            <Link href="/" className="secondary-button inline-flex items-center justify-center">
-              Go Home
-            </Link>
-          </div>
-          {shareUrl ? <p className="mt-4 break-all text-xs text-textSecondary">{shareUrl}</p> : null}
-        </section>
+            <p className="result-share-status text-xs text-textSecondary" aria-live="polite">
+              {shareStatusMessage}
+            </p>
+            {shareUrl ? <p className="result-share-link break-all text-xs text-textSecondary">{shareUrl}</p> : null}
+            {error ? <p className="status-note" data-tone="warning">{error}</p> : null}
+          </section>
+        </aside>
       </motion.section>
     </PageTransition>
   );
