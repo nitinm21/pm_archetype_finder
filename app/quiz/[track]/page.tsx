@@ -114,18 +114,16 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
             return;
           }
 
-          const nextIndex = questions.findIndex((question) => !existing.answers[question.id]);
           setSnapshot(existing);
           setSessionId(existing.sessionId);
           setAnswers(existing.answers);
-          setCurrentIndex(nextIndex === -1 ? questions.length - 1 : nextIndex);
+          setCurrentIndex(0);
           setStarted(true);
         } catch {
-          const nextIndex = questions.findIndex((question) => !existing.answers[question.id]);
           setSnapshot(existing);
           setSessionId(existing.sessionId);
           setAnswers(existing.answers);
-          setCurrentIndex(nextIndex === -1 ? questions.length - 1 : nextIndex);
+          setCurrentIndex(0);
           setStarted(true);
         } finally {
           setInitializing(false);
@@ -293,11 +291,9 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
       return;
     }
 
-    const nextIndex = questions.findIndex((question) => !snapshot.answers[question.id]);
-
     setSessionId(snapshot.sessionId);
     setAnswers(snapshot.answers);
-    setCurrentIndex(nextIndex === -1 ? questions.length - 1 : nextIndex);
+    setCurrentIndex(0);
     setStarted(true);
     setUnsyncedIds([]);
 
