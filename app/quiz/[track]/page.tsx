@@ -13,6 +13,7 @@ import {
   getLocalSession,
   getStoredSelectedTrack,
   markLocalSessionCompleted,
+  removeLocalSession,
   saveLocalSession,
   updateLocalAnswer,
   type LocalSessionSnapshot
@@ -23,6 +24,11 @@ interface QuizPageProps {
   params: {
     track: string;
   };
+}
+
+interface StartSessionResponse {
+  sessionId: string;
+  startedAt: string;
 }
 
 const SELECTION_CONFIRM_MS = 500;
@@ -86,20 +92,48 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
       return;
     }
 
-    setSnapshot(existing);
-
     if (existing.completedAt) {
+      setSnapshot(existing);
       setMode("completed");
+      setInitializing(false);
     } else {
       setMode("resume");
-      const nextIndex = questions.findIndex((question) => !existing.answers[question.id]);
-      setSessionId(existing.sessionId);
-      setAnswers(existing.answers);
-      setCurrentIndex(nextIndex === -1 ? questions.length - 1 : nextIndex);
-      setStarted(true);
-    }
 
-    setInitializing(false);
+      void (async () => {
+        try {
+          const response = await fetch(`/api/session/${existing.sessionId}`, { cache: "no-store" });
+          if (!response.ok) {
+            removeLocalSession(existing.sessionId);
+            setSnapshot(null);
+            setSessionId(null);
+            setAnswers({});
+            setCurrentIndex(0);
+            setStarted(false);
+            setMode("start");
+            setError("Your previous local draft is no longer on the server. Start a fresh assessment.");
+            return;
+          }
+
+          const nextIndex = questions.findIndex((question) => !existing.answers[question.id]);
+          setSnapshot(existing);
+          setSessionId(existing.sessionId);
+          setAnswers(existing.answers);
+          setCurrentIndex(nextIndex === -1 ? questions.length - 1 : nextIndex);
+          setStarted(true);
+        } catch {
+          const nextIndex = questions.findIndex((question) => !existing.answers[question.id]);
+          setSnapshot(existing);
+          setSessionId(existing.sessionId);
+          setAnswers(existing.answers);
+          setCurrentIndex(nextIndex === -1 ? questions.length - 1 : nextIndex);
+          setStarted(true);
+        } finally {
+          setInitializing(false);
+        }
+      })();
+
+      return;
+    }
   }, [validTrack, track, forceRetake, questions]);
 
   useEffect(() => {
@@ -188,6 +222,27 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
     }
   };
 
+  const requestNewSession = async (previousSessionId?: string): Promise<StartSessionResponse> => {
+    const response = await fetch("/api/session/start", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        track,
+        source: "web",
+        previousSessionId
+      })
+    });
+
+    if (!response.ok) {
+      const data = (await response.json().catch(() => null)) as { error?: string } | null;
+      throw new Error(data?.error ?? "Could not start session.");
+    }
+
+    return (await response.json()) as StartSessionResponse;
+  };
+
   const startNewSession = async () => {
     setIsStarting(true);
     setError(null);
@@ -197,24 +252,7 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
       const previousSnapshot = previousSessionId ? getLocalSession(previousSessionId) : null;
       const shouldArchive = Boolean(previousSnapshot && previousSnapshot.completedAt === null);
 
-      const response = await fetch("/api/session/start", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          track,
-          source: "web",
-          previousSessionId: shouldArchive ? previousSessionId : undefined
-        })
-      });
-
-      if (!response.ok) {
-        const data = (await response.json().catch(() => null)) as { error?: string } | null;
-        throw new Error(data?.error ?? "Could not start session.");
-      }
-
-      const data = (await response.json()) as { sessionId: string; startedAt: string };
+      const data = await requestNewSession(shouldArchive ? previousSessionId ?? undefined : undefined);
 
       if (previousSnapshot && previousSnapshot.track !== track) {
         trackEvent("track_switched", {
@@ -298,8 +336,10 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
         await syncSingleAnswer(sessionId, questionId, choice);
         clearUnsynced(questionId);
         setError(null);
-      } catch {
-        setError("We saved your progress locally, but syncing failed. Retry sync before completing.");
+      } catch (syncError) {
+        const detail =
+          syncError instanceof Error ? ` ${syncError.message}` : " Retry sync before completing.";
+        setError(`We saved your progress locally, but syncing failed.${detail}`);
       }
     })();
 
@@ -368,6 +408,39 @@ export default function QuizTrackPage({ params }: QuizPageProps) {
         await completeQuiz(sessionId, answers);
       }
     } catch (syncError) {
+      const message = syncError instanceof Error ? syncError.message : "";
+      const shouldRecoverSession = message.includes("Session not found.") || message.includes("Session is not in progress.");
+
+      if (shouldRecoverSession) {
+        try {
+          const recovered = await requestNewSession(sessionId);
+          saveLocalSession({
+            sessionId: recovered.sessionId,
+            track,
+            answers,
+            startedAt: recovered.startedAt,
+            completedAt: null
+          });
+          setSessionId(recovered.sessionId);
+
+          await syncAllAnswers(recovered.sessionId, answers);
+
+          if (Object.keys(answers).length === questions.length) {
+            await completeQuiz(recovered.sessionId, answers);
+          } else {
+            setError(null);
+          }
+          return;
+        } catch (recoveryError) {
+          setError(
+            recoveryError instanceof Error
+              ? recoveryError.message
+              : "Could not recover your session. Start a fresh assessment."
+          );
+          return;
+        }
+      }
+
       setError(syncError instanceof Error ? syncError.message : "Could not sync answers.");
     }
   };

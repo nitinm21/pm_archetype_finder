@@ -122,3 +122,16 @@ export function markLocalSessionCompleted(sessionId: string) {
     completedAt: new Date().toISOString()
   });
 }
+
+export function removeLocalSession(sessionId: string) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.localStorage.removeItem(keyForSession(sessionId));
+
+  const activeSessionId = getActiveSessionId();
+  if (activeSessionId === sessionId) {
+    window.localStorage.removeItem(`${STORAGE_PREFIX}:active-session`);
+  }
+}

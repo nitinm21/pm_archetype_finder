@@ -59,6 +59,26 @@
       "source": "web",
       "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
       "status": "completed"
+    },
+    "29de959c-7813-446b-b95c-04fe50fe40e2": {
+      "id": "29de959c-7813-446b-b95c-04fe50fe40e2",
+      "track": "b2b",
+      "startedAt": "2026-02-21T22:04:24.815Z",
+      "completedAt": null,
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "curl/8.7.1",
+      "status": "in_progress"
+    },
+    "d91df3ca-fe2b-4920-9558-3f62f579595f": {
+      "id": "d91df3ca-fe2b-4920-9558-3f62f579595f",
+      "track": "b2b",
+      "startedAt": "2026-02-21T22:05:48.603Z",
+      "completedAt": null,
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "in_progress"
     }
   },
   "answers": {
@@ -552,6 +572,34 @@
         "mappedSide": "discovery",
         "weightApplied": 2,
         "createdAt": "2026-02-21T21:05:17.803Z"
+      }
+    },
+    "29de959c-7813-446b-b95c-04fe50fe40e2": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:04:24.906Z"
+      }
+    },
+    "d91df3ca-fe2b-4920-9558-3f62f579595f": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:05:50.316Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T22:05:52.133Z"
       }
     }
   },
