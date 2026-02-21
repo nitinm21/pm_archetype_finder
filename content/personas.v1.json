@@ -1,0 +1,373 @@
+{
+  "version": "v1",
+  "personas": [
+    {
+      "id": "b2b_insight_architect",
+      "track": "b2b",
+      "name": "Insight Architect",
+      "summary": "You thrive when ambiguity is high and strategic clarity must be built from real customer evidence.",
+      "strengths": [
+        "Uncovers root customer problems early",
+        "Connects qualitative signals to strategic bets",
+        "Aligns teams with shared decision criteria",
+        "Reduces rework through upfront validation"
+      ],
+      "dimensions": {
+        "d1": "discovery",
+        "d2": "strategic",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Discovery",
+        "d2": "Strategic",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_vision_driver",
+      "track": "b2b",
+      "name": "Vision Driver",
+      "summary": "You pair deep strategic framing with decisive calls to move the organization through uncertainty.",
+      "strengths": [
+        "Turns ambiguity into clear direction quickly",
+        "Makes hard strategic calls under uncertainty",
+        "Creates momentum on high-impact bets",
+        "Communicates rationale with clarity"
+      ],
+      "dimensions": {
+        "d1": "discovery",
+        "d2": "strategic",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Discovery",
+        "d2": "Strategic",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_strategy_conductor",
+      "track": "b2b",
+      "name": "Strategy Conductor",
+      "summary": "You convert long-range strategy into coordinated execution while keeping teams aligned on critical tradeoffs.",
+      "strengths": [
+        "Translates strategy into executable plans",
+        "Aligns cross-functional teams around tradeoffs",
+        "Manages dependencies across functions",
+        "Keeps long-term bets moving with operational control"
+      ],
+      "dimensions": {
+        "d1": "delivery",
+        "d2": "strategic",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Delivery",
+        "d2": "Strategic",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_bet_builder",
+      "track": "b2b",
+      "name": "Bet Builder",
+      "summary": "You operate with high conviction on strategic bets and keep execution accountable to outcomes.",
+      "strengths": [
+        "Commits decisively to high-leverage initiatives",
+        "Prioritizes ruthlessly against product thesis",
+        "Removes decision bottlenecks",
+        "Drives accountable execution to outcomes"
+      ],
+      "dimensions": {
+        "d1": "delivery",
+        "d2": "strategic",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Delivery",
+        "d2": "Strategic",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_customer_coach",
+      "track": "b2b",
+      "name": "Customer Coach",
+      "summary": "You keep the team close to user workflows and channel discovery into practical, near-term product movement.",
+      "strengths": [
+        "Brings strong empathy for real user workflows",
+        "Surfaces adoption friction quickly",
+        "Runs practical discovery tied to near-term impact",
+        "Builds trust across teams through collaboration"
+      ],
+      "dimensions": {
+        "d1": "discovery",
+        "d2": "tactical",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Discovery",
+        "d2": "Tactical",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_rapid_experimenter",
+      "track": "b2b",
+      "name": "Rapid Experimenter",
+      "summary": "You move quickly through uncertainty by running low-cost tests and turning weak signals into direction.",
+      "strengths": [
+        "Designs fast, low-cost tests",
+        "Learns quickly from imperfect data",
+        "Adapts roadmap based on evidence",
+        "Converts uncertainty into measurable progress"
+      ],
+      "dimensions": {
+        "d1": "discovery",
+        "d2": "tactical",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Discovery",
+        "d2": "Tactical",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_delivery_integrator",
+      "track": "b2b",
+      "name": "Delivery Integrator",
+      "summary": "You excel at orchestrating dependable execution across moving parts while protecting launch quality.",
+      "strengths": [
+        "Orchestrates reliable cross-team delivery",
+        "De-risks launches with clear planning",
+        "Keeps timeline, quality, and expectations aligned",
+        "Maintains strong operational follow-through"
+      ],
+      "dimensions": {
+        "d1": "delivery",
+        "d2": "tactical",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Delivery",
+        "d2": "Tactical",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2b_outcome_operator",
+      "track": "b2b",
+      "name": "Outcome Operator",
+      "summary": "You are outcome-forward, execution-heavy, and highly effective in pressure windows where speed matters.",
+      "strengths": [
+        "Shows a strong bias to action",
+        "Improves near-term KPIs consistently",
+        "Makes fast execution tradeoffs under pressure",
+        "Maintains clear ownership and delivery discipline"
+      ],
+      "dimensions": {
+        "d1": "delivery",
+        "d2": "tactical",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Delivery",
+        "d2": "Tactical",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+    },
+    {
+      "id": "b2c_user_advocate",
+      "track": "b2c",
+      "name": "User Advocate",
+      "summary": "You protect user trust by prioritizing learning depth and product experience before scaling tactics.",
+      "strengths": [
+        "Demonstrates deep user empathy and behavior insight",
+        "Protects long-term trust and product quality",
+        "Aligns teams around user value",
+        "Identifies root causes before scaling changes"
+      ],
+      "dimensions": {
+        "d1": "learning-first",
+        "d2": "experience-first",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Learning-first",
+        "d2": "Experience-first",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_trust_visionary",
+      "track": "b2c",
+      "name": "Trust Visionary",
+      "summary": "You lead with principled judgment, pairing user trust with decisive action at critical moments.",
+      "strengths": [
+        "Makes principled calls on safety and experience",
+        "Spots trust risks early",
+        "Sets clear quality and ethics standards",
+        "Balances brand integrity with product velocity"
+      ],
+      "dimensions": {
+        "d1": "learning-first",
+        "d2": "experience-first",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Learning-first",
+        "d2": "Experience-first",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_craft_orchestrator",
+      "track": "b2c",
+      "name": "Craft Orchestrator",
+      "summary": "You ship consumer experiences with strong craft quality while keeping cross-functional execution tight.",
+      "strengths": [
+        "Ships polished experiences through strong collaboration",
+        "Balances speed with UX quality",
+        "Coordinates design and engineering effectively",
+        "Improves retention through iterative craft"
+      ],
+      "dimensions": {
+        "d1": "shipping-first",
+        "d2": "experience-first",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Shipping-first",
+        "d2": "Experience-first",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_experience_captain",
+      "track": "b2c",
+      "name": "Experience Captain",
+      "summary": "You drive high-velocity consumer UX decisions without losing coherence in the product experience.",
+      "strengths": [
+        "Drives fast UX execution with clear standards",
+        "Unblocks teams quickly",
+        "Makes decisive quality tradeoffs near deadlines",
+        "Maintains a coherent product experience"
+      ],
+      "dimensions": {
+        "d1": "shipping-first",
+        "d2": "experience-first",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Shipping-first",
+        "d2": "Experience-first",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_growth_researcher",
+      "track": "b2c",
+      "name": "Growth Researcher",
+      "summary": "You blend learning discipline with growth ambition to build sustainable, evidence-backed expansion loops.",
+      "strengths": [
+        "Combines user learning with growth analytics",
+        "Runs strong cohort-based experiments",
+        "Aligns lifecycle, product, and marketing with evidence",
+        "Finds sustainable growth loops"
+      ],
+      "dimensions": {
+        "d1": "learning-first",
+        "d2": "growth-first",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Learning-first",
+        "d2": "Growth-first",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_growth_pioneer",
+      "track": "b2c",
+      "name": "Growth Pioneer",
+      "summary": "You spot high-upside opportunities early and commit quickly to growth moves under competitive pressure.",
+      "strengths": [
+        "Moves early on high-upside growth opportunities",
+        "Converts insight into decisive growth bets",
+        "Performs well in competitive environments",
+        "Creates momentum while learning quickly"
+      ],
+      "dimensions": {
+        "d1": "learning-first",
+        "d2": "growth-first",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Learning-first",
+        "d2": "Growth-first",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_scale_conductor",
+      "track": "b2c",
+      "name": "Scale Conductor",
+      "summary": "You coordinate growth execution at scale, building repeatable systems without losing alignment.",
+      "strengths": [
+        "Orchestrates growth execution across teams",
+        "Builds repeatable experimentation systems",
+        "Aligns stakeholders on guardrails and goals",
+        "Delivers steady growth at scale"
+      ],
+      "dimensions": {
+        "d1": "shipping-first",
+        "d2": "growth-first",
+        "d3": "facilitator"
+      },
+      "dimensionLabels": {
+        "d1": "Shipping-first",
+        "d2": "Growth-first",
+        "d3": "Facilitator"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    },
+    {
+      "id": "b2c_performance_operator",
+      "track": "b2c",
+      "name": "Performance Operator",
+      "summary": "You focus relentlessly on growth and monetization outcomes through fast, accountable execution.",
+      "strengths": [
+        "Stays focused on growth and monetization outcomes",
+        "Makes fast tradeoffs in high-pressure windows",
+        "Drives high-velocity shipping cadence",
+        "Maintains strong accountability for results"
+      ],
+      "dimensions": {
+        "d1": "shipping-first",
+        "d2": "growth-first",
+        "d3": "decider"
+      },
+      "dimensionLabels": {
+        "d1": "Shipping-first",
+        "d2": "Growth-first",
+        "d3": "Decider"
+      },
+      "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "version": "v1",
+  "confidenceBands": {
+    "lowMax": 64,
+    "mediumMax": 79
+  },
+  "tracks": {
+    "b2b": {
+      "dimensions": [
+        {
+          "id": "d1",
+          "name": "Discovery vs Delivery",
+          "sides": ["discovery", "delivery"],
+          "questionIds": ["q1", "q4", "q7", "q10"],
+          "weightOverrides": {"q10": 2},
+          "tieBreakerQuestionId": "q10",
+          "priorWinner": "discovery"
+        },
+        {
+          "id": "d2",
+          "name": "Strategic vs Tactical",
+          "sides": ["strategic", "tactical"],
+          "questionIds": ["q2", "q5", "q8"],
+          "weightOverrides": {"q5": 2},
+          "tieBreakerQuestionId": "q5",
+          "priorWinner": "strategic"
+        },
+        {
+          "id": "d3",
+          "name": "Facilitator vs Decider",
+          "sides": ["facilitator", "decider"],
+          "questionIds": ["q3", "q6", "q9"],
+          "weightOverrides": {"q6": 2},
+          "tieBreakerQuestionId": "q6",
+          "priorWinner": "facilitator"
+        }
+      ],
+      "confidenceWeights": {
+        "d1": 0.4,
+        "d2": 0.3,
+        "d3": 0.3
+      }
+    },
+    "b2c": {
+      "dimensions": [
+        {
+          "id": "d1",
+          "name": "Learning-first vs Shipping-first",
+          "sides": ["learning-first", "shipping-first"],
+          "questionIds": ["q1", "q4", "q7", "q10"],
+          "weightOverrides": {"q10": 2},
+          "tieBreakerQuestionId": "q1",
+          "priorWinner": "learning-first"
+        },
+        {
+          "id": "d2",
+          "name": "Experience-first vs Growth-first",
+          "sides": ["experience-first", "growth-first"],
+          "questionIds": ["q2", "q5", "q8"],
+          "weightOverrides": {"q5": 2},
+          "tieBreakerQuestionId": "q8",
+          "priorWinner": "experience-first"
+        },
+        {
+          "id": "d3",
+          "name": "Facilitator vs Decider",
+          "sides": ["facilitator", "decider"],
+          "questionIds": ["q3", "q6", "q9"],
+          "weightOverrides": {"q9": 2},
+          "tieBreakerQuestionId": "q9",
+          "priorWinner": "facilitator"
+        }
+      ],
+      "confidenceWeights": {
+        "d1": 0.4,
+        "d2": 0.3,
+        "d3": 0.3
+      }
+    }
+  }
+}

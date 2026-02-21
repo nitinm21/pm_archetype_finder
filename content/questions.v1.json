@@ -1,0 +1,307 @@
+{
+  "version": "v1",
+  "tracks": {
+    "b2b": {
+      "label": "B2B SaaS PM",
+      "assumptions": [
+        "You are PM for a B2B SaaS product.",
+        "Your squad is 6 engineers, 1 designer, and a shared analyst.",
+        "You can choose one primary action first, not both.",
+        "Unless stated otherwise, horizon is the next 4-8 weeks."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Activation dropped from 52% to 35% after a new onboarding flow. The CEO wants recovery evidence before the next monthly business review in 4 weeks, and engineering can only do one medium-sized project this sprint.",
+          "options": {
+            "A": {
+              "label": "Roll back the riskiest onboarding step now and ship friction fixes from known support tickets this sprint.",
+              "mapsTo": "delivery"
+            },
+            "B": {
+              "label": "Keep the new flow, run targeted user interviews plus event audit this week, and ship a root-cause fix next sprint.",
+              "mapsTo": "discovery"
+            }
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "You are seeing weekly reliability incidents caused by API latency. Sales has already committed three enterprise integrations worth major pipeline this quarter.",
+          "options": {
+            "A": {
+              "label": "Reserve meaningful capacity now for reliability work and renegotiate integration dates.",
+              "mapsTo": "strategic"
+            },
+            "B": {
+              "label": "Deliver integrations first and schedule reliability remediation next quarter.",
+              "mapsTo": "tactical"
+            }
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "A large renewal is at risk unless you support a custom approval workflow. Product strategy says avoid one-off enterprise features, and leadership is split.",
+          "options": {
+            "A": {
+              "label": "Run a decision session with CRO, Product, and Engineering using a shared rubric and decide from that process.",
+              "mapsTo": "facilitator"
+            },
+            "B": {
+              "label": "Make the call immediately based on strategy fit and communicate rationale asynchronously.",
+              "mapsTo": "decider"
+            }
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Ninety-day retention has been flat for two quarters. You have solid event data but no recent qualitative research from churned or power users.",
+          "options": {
+            "A": {
+              "label": "Run a short discovery sprint with interviews and journey mapping before changing roadmap priorities.",
+              "mapsTo": "discovery"
+            },
+            "B": {
+              "label": "Ship the top two retention interventions from current telemetry immediately and measure lift.",
+              "mapsTo": "delivery"
+            }
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Mid-quarter budget cuts remove 35% of your discretionary spend. You can protect only one track: long-term platform migration or near-term monetization improvements.",
+          "options": {
+            "A": {
+              "label": "Protect platform migration because it unlocks future product expansion.",
+              "mapsTo": "strategic"
+            },
+            "B": {
+              "label": "Pause migration and focus on immediate monetization and upsell gains.",
+              "mapsTo": "tactical"
+            }
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Engineering wants a backend rewrite for scalability, while Design wants iterative UX improvements for current conversion problems. You must present a committed plan by Friday.",
+          "options": {
+            "A": {
+              "label": "Facilitate a structured tradeoff workshop with objective criteria, then commit.",
+              "mapsTo": "facilitator"
+            },
+            "B": {
+              "label": "Choose one path now from strategic priorities and lock the plan today.",
+              "mapsTo": "decider"
+            }
+          }
+        },
+        {
+          "id": "q7",
+          "prompt": "Competitors just launched an AI copilot and your GTM team wants parity in 6 weeks. Your internal data quality is still uneven.",
+          "options": {
+            "A": {
+              "label": "Run a concierge prototype with a small design-partner set to validate jobs-to-be-done first.",
+              "mapsTo": "discovery"
+            },
+            "B": {
+              "label": "Ship a tightly scoped beta quickly to avoid narrative gap, then learn from usage.",
+              "mapsTo": "delivery"
+            }
+          }
+        },
+        {
+          "id": "q8",
+          "prompt": "You have a major conference launch slot in 5 weeks. The build works for happy paths but edge-case failures affect about 8% of target users.",
+          "options": {
+            "A": {
+              "label": "Launch a limited version at conference and harden rapidly after launch.",
+              "mapsTo": "tactical"
+            },
+            "B": {
+              "label": "Skip conference launch and release later with stronger reliability.",
+              "mapsTo": "strategic"
+            }
+          }
+        },
+        {
+          "id": "q9",
+          "prompt": "A production outage came from combined decisions across product and infrastructure. Team leads disagree on ownership for prevention work.",
+          "options": {
+            "A": {
+              "label": "Assign a single accountable owner immediately and enforce deadlines.",
+              "mapsTo": "decider"
+            },
+            "B": {
+              "label": "Run a joint postmortem first, define RACI and prevention plan, then assign owners.",
+              "mapsTo": "facilitator"
+            }
+          }
+        },
+        {
+          "id": "q10",
+          "prompt": "A feature launched 8 weeks ago is used weekly by only 12% of its target accounts. Leadership wants a turnaround plan in 10 days.",
+          "options": {
+            "A": {
+              "label": "Investigate workflow mismatch through interviews and replays, and potentially reposition the feature.",
+              "mapsTo": "discovery"
+            },
+            "B": {
+              "label": "Push adoption now through onboarding prompts, lifecycle messaging, and packaging or pricing experiments.",
+              "mapsTo": "delivery"
+            }
+          }
+        }
+      ]
+    },
+    "b2c": {
+      "label": "B2C Consumer PM",
+      "assumptions": [
+        "You are PM for a consumer mobile app with around 2M MAU.",
+        "Your squad is 6 engineers, 1 designer, and a shared data scientist.",
+        "You can choose one primary action first, not both.",
+        "Unless stated otherwise, horizon is the next 4-8 weeks."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Seven-day retention dropped from 31% to 24% after an onboarding redesign. Paid acquisition ramps in 2 weeks, and engineering can do only one medium change this sprint.",
+          "options": {
+            "A": {
+              "label": "Roll back the riskiest onboarding step now and ship quick drop-off fixes.",
+              "mapsTo": "shipping-first"
+            },
+            "B": {
+              "label": "Keep the new flow, run cohort and session analysis plus interviews, then ship a root-cause fix next sprint.",
+              "mapsTo": "learning-first"
+            }
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Notification frequency can move from two per week to daily. Forecast: +5% DAU, but +1.5% weekly opt-outs and +0.4% uninstall risk.",
+          "options": {
+            "A": {
+              "label": "Launch higher frequency with guardrails to capture engagement upside.",
+              "mapsTo": "growth-first"
+            },
+            "B": {
+              "label": "Keep cadence lower and improve relevance quality before increasing sends.",
+              "mapsTo": "experience-first"
+            }
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "A top creator wants moderation exceptions. Policy says no, Partnerships says losing them hurts growth. You need a decision in 48 hours.",
+          "options": {
+            "A": {
+              "label": "Run a structured cross-functional decision session and align on a shared rubric.",
+              "mapsTo": "facilitator"
+            },
+            "B": {
+              "label": "Make the call immediately based on platform principles and communicate it today.",
+              "mapsTo": "decider"
+            }
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "A new Collections feature gets 18% trial but only 6% repeat usage by week 2. Telemetry exists, but user intent is unclear.",
+          "options": {
+            "A": {
+              "label": "Run a rapid discovery sprint with interviews or diary study before changing roadmap bets.",
+              "mapsTo": "learning-first"
+            },
+            "B": {
+              "label": "Ship usage nudges, templates, and in-app prompts now to increase repeat behavior.",
+              "mapsTo": "shipping-first"
+            }
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Quarterly revenue needs plus 12% ARPDAU. Adding one ad slot is estimated to deliver plus 14% revenue but minus 3% session length.",
+          "options": {
+            "A": {
+              "label": "Add the ad slot and monitor churn and retention thresholds.",
+              "mapsTo": "growth-first"
+            },
+            "B": {
+              "label": "Keep ad load stable and pursue lower-friction monetization paths first.",
+              "mapsTo": "experience-first"
+            }
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Design wants a navigation revamp. Engineering prefers incremental fixes due to regression risk. Release window closes in 10 days.",
+          "options": {
+            "A": {
+              "label": "Facilitate a tradeoff workshop with objective criteria, then commit jointly.",
+              "mapsTo": "facilitator"
+            },
+            "B": {
+              "label": "Choose a direction now and lock sprint scope immediately.",
+              "mapsTo": "decider"
+            }
+          }
+        },
+        {
+          "id": "q7",
+          "prompt": "A competitor launched a streak mechanic and social chatter is strong. You can either validate impact first or ship quickly.",
+          "options": {
+            "A": {
+              "label": "Run a two-week prototype with target cohorts to verify retention impact.",
+              "mapsTo": "learning-first"
+            },
+            "B": {
+              "label": "Ship a lean streak version in three weeks and learn from live usage.",
+              "mapsTo": "shipping-first"
+            }
+          }
+        },
+        {
+          "id": "q8",
+          "prompt": "Moving the paywall earlier is modeled to increase conversion plus 9% but reduce week-1 engagement by 7%.",
+          "options": {
+            "A": {
+              "label": "Move paywall earlier to hit conversion and revenue targets.",
+              "mapsTo": "growth-first"
+            },
+            "B": {
+              "label": "Keep paywall later and improve value perception before gating.",
+              "mapsTo": "experience-first"
+            }
+          }
+        },
+        {
+          "id": "q9",
+          "prompt": "A public safety incident is trending. Trust and Safety, Comms, and Product each propose different immediate actions.",
+          "options": {
+            "A": {
+              "label": "Align teams in a war-room first, define owners and criteria, then execute.",
+              "mapsTo": "facilitator"
+            },
+            "B": {
+              "label": "Make one immediate accountable decision and drive execution top-down.",
+              "mapsTo": "decider"
+            }
+          }
+        },
+        {
+          "id": "q10",
+          "prompt": "Thirty-day churn is high on mid-tier Android devices; complaints mention slow load and unclear value. Next growth spend starts in 10 days.",
+          "options": {
+            "A": {
+              "label": "Pause spend, diagnose root causes with performance traces and user calls, then reprioritize.",
+              "mapsTo": "learning-first"
+            },
+            "B": {
+              "label": "Keep spend live and ship quick win-back and onboarding interventions now.",
+              "mapsTo": "shipping-first"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

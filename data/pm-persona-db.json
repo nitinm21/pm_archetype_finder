@@ -1,0 +1,1096 @@
+{
+  "sessions": {
+    "05261e39-4e00-4697-93e5-3f862f2fe1db": {
+      "id": "05261e39-4e00-4697-93e5-3f862f2fe1db",
+      "track": "b2b",
+      "startedAt": "2026-02-20T21:57:44.970Z",
+      "completedAt": "2026-02-21T03:46:55.099Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
+    },
+    "d71fb4d0-dc4f-4c82-9c4f-d530bb7b0e81": {
+      "id": "d71fb4d0-dc4f-4c82-9c4f-d530bb7b0e81",
+      "track": "b2b",
+      "startedAt": "2026-02-21T03:48:52.257Z",
+      "completedAt": "2026-02-21T04:03:51.092Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
+    },
+    "67c6f4c6-9da5-47b7-a6d0-ccea08652514": {
+      "id": "67c6f4c6-9da5-47b7-a6d0-ccea08652514",
+      "track": "b2b",
+      "startedAt": "2026-02-21T04:16:44.587Z",
+      "completedAt": "2026-02-21T04:17:02.935Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
+    },
+    "673a617b-cdd8-454f-934b-0c14e326f2b2": {
+      "id": "673a617b-cdd8-454f-934b-0c14e326f2b2",
+      "track": "b2b",
+      "startedAt": "2026-02-21T04:35:57.280Z",
+      "completedAt": "2026-02-21T04:36:10.434Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
+    },
+    "03a72279-2cfa-43c3-b230-0d5e9e072d43": {
+      "id": "03a72279-2cfa-43c3-b230-0d5e9e072d43",
+      "track": "b2c",
+      "startedAt": "2026-02-21T20:56:42.166Z",
+      "completedAt": "2026-02-21T21:02:30.577Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
+    },
+    "bc626dcc-18ff-49a8-8818-24db5e0c65cd": {
+      "id": "bc626dcc-18ff-49a8-8818-24db5e0c65cd",
+      "track": "b2b",
+      "startedAt": "2026-02-21T21:04:34.875Z",
+      "completedAt": "2026-02-21T21:05:17.963Z",
+      "archivedAt": null,
+      "source": "web",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "status": "completed"
+    }
+  },
+  "answers": {
+    "05261e39-4e00-4697-93e5-3f862f2fe1db": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.610Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.619Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.627Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.634Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T03:46:54.641Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T03:46:54.649Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.657Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.664Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T03:46:54.675Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T03:46:54.681Z"
+      }
+    },
+    "d71fb4d0-dc4f-4c82-9c4f-d530bb7b0e81": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.724Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.734Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.739Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.743Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:03:50.747Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:03:50.751Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.754Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.758Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:03:50.763Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:03:50.768Z"
+      }
+    },
+    "67c6f4c6-9da5-47b7-a6d0-ccea08652514": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.592Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.607Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.617Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.624Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:17:02.630Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:17:02.640Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.646Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.651Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:17:02.656Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:17:02.661Z"
+      }
+    },
+    "673a617b-cdd8-454f-934b-0c14e326f2b2": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.108Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.127Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.138Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.145Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:36:10.152Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:36:10.158Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.164Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.173Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T04:36:10.179Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T04:36:10.184Z"
+      }
+    },
+    "03a72279-2cfa-43c3-b230-0d5e9e072d43": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "learning-first",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.094Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "growth-first",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.114Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.125Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "B",
+        "mappedDimension": "d1",
+        "mappedSide": "shipping-first",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.134Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "experience-first",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T21:02:30.144Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.152Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "learning-first",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.159Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "B",
+        "mappedDimension": "d2",
+        "mappedSide": "experience-first",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:02:30.165Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T21:02:30.171Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "learning-first",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T21:02:30.178Z"
+      }
+    },
+    "bc626dcc-18ff-49a8-8818-24db5e0c65cd": {
+      "q1": {
+        "questionId": "q1",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "delivery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.716Z"
+      },
+      "q2": {
+        "questionId": "q2",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.729Z"
+      },
+      "q3": {
+        "questionId": "q3",
+        "choice": "B",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.738Z"
+      },
+      "q4": {
+        "questionId": "q4",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.747Z"
+      },
+      "q5": {
+        "questionId": "q5",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "strategic",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T21:05:17.756Z"
+      },
+      "q6": {
+        "questionId": "q6",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "facilitator",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T21:05:17.769Z"
+      },
+      "q7": {
+        "questionId": "q7",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.778Z"
+      },
+      "q8": {
+        "questionId": "q8",
+        "choice": "A",
+        "mappedDimension": "d2",
+        "mappedSide": "tactical",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.786Z"
+      },
+      "q9": {
+        "questionId": "q9",
+        "choice": "A",
+        "mappedDimension": "d3",
+        "mappedSide": "decider",
+        "weightApplied": 1,
+        "createdAt": "2026-02-21T21:05:17.795Z"
+      },
+      "q10": {
+        "questionId": "q10",
+        "choice": "A",
+        "mappedDimension": "d1",
+        "mappedSide": "discovery",
+        "weightApplied": 2,
+        "createdAt": "2026-02-21T21:05:17.803Z"
+      }
+    }
+  },
+  "results": {
+    "05261e39-4e00-4697-93e5-3f862f2fe1db": {
+      "sessionId": "05261e39-4e00-4697-93e5-3f862f2fe1db",
+      "track": "b2b",
+      "personaId": "b2b_delivery_integrator",
+      "dimensionWinners": {
+        "d1": "delivery",
+        "d2": "tactical",
+        "d3": "facilitator"
+      },
+      "confidence": 78,
+      "createdAt": "2026-02-21T03:46:55.099Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_delivery_integrator",
+          "track": "b2b",
+          "name": "Delivery Integrator",
+          "summary": "You excel at orchestrating dependable execution across moving parts while protecting launch quality.",
+          "strengths": [
+            "Orchestrates reliable cross-team delivery",
+            "De-risks launches with clear planning",
+            "Keeps timeline, quality, and expectations aligned",
+            "Maintains strong operational follow-through"
+          ],
+          "dimensions": {
+            "d1": "delivery",
+            "d2": "tactical",
+            "d3": "facilitator"
+          },
+          "dimensionLabels": {
+            "d1": "Delivery",
+            "d2": "Tactical",
+            "d3": "Facilitator"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "delivery",
+            "scores": {
+              "discovery": 0,
+              "delivery": 5
+            },
+            "percentages": {
+              "discovery": 0,
+              "delivery": 100
+            },
+            "certainty": 100,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "tactical",
+            "scores": {
+              "strategic": 2,
+              "tactical": 2
+            },
+            "percentages": {
+              "strategic": 50,
+              "tactical": 50
+            },
+            "certainty": 50,
+            "tieResolvedBy": "tie_breaker"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "facilitator",
+            "scores": {
+              "facilitator": 3,
+              "decider": 1
+            },
+            "percentages": {
+              "facilitator": 75,
+              "decider": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          }
+        },
+        "confidence": 78,
+        "confidenceBand": "Medium"
+      }
+    },
+    "d71fb4d0-dc4f-4c82-9c4f-d530bb7b0e81": {
+      "sessionId": "d71fb4d0-dc4f-4c82-9c4f-d530bb7b0e81",
+      "track": "b2b",
+      "personaId": "b2b_rapid_experimenter",
+      "dimensionWinners": {
+        "d1": "discovery",
+        "d2": "tactical",
+        "d3": "decider"
+      },
+      "confidence": 77,
+      "createdAt": "2026-02-21T04:03:51.092Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_rapid_experimenter",
+          "track": "b2b",
+          "name": "Rapid Experimenter",
+          "summary": "You move quickly through uncertainty by running low-cost tests and turning weak signals into direction.",
+          "strengths": [
+            "Designs fast, low-cost tests",
+            "Learns quickly from imperfect data",
+            "Adapts roadmap based on evidence",
+            "Converts uncertainty into measurable progress"
+          ],
+          "dimensions": {
+            "d1": "discovery",
+            "d2": "tactical",
+            "d3": "decider"
+          },
+          "dimensionLabels": {
+            "d1": "Discovery",
+            "d2": "Tactical",
+            "d3": "Decider"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "discovery",
+            "scores": {
+              "discovery": 4,
+              "delivery": 1
+            },
+            "percentages": {
+              "discovery": 80,
+              "delivery": 20
+            },
+            "certainty": 80,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "tactical",
+            "scores": {
+              "strategic": 1,
+              "tactical": 3
+            },
+            "percentages": {
+              "strategic": 25,
+              "tactical": 75
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "decider",
+            "scores": {
+              "facilitator": 1,
+              "decider": 3
+            },
+            "percentages": {
+              "facilitator": 25,
+              "decider": 75
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          }
+        },
+        "confidence": 77,
+        "confidenceBand": "Medium"
+      }
+    },
+    "67c6f4c6-9da5-47b7-a6d0-ccea08652514": {
+      "sessionId": "67c6f4c6-9da5-47b7-a6d0-ccea08652514",
+      "track": "b2b",
+      "personaId": "b2b_vision_driver",
+      "dimensionWinners": {
+        "d1": "discovery",
+        "d2": "strategic",
+        "d3": "decider"
+      },
+      "confidence": 54,
+      "createdAt": "2026-02-21T04:17:02.935Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_vision_driver",
+          "track": "b2b",
+          "name": "Vision Driver",
+          "summary": "You pair deep strategic framing with decisive calls to move the organization through uncertainty.",
+          "strengths": [
+            "Turns ambiguity into clear direction quickly",
+            "Makes hard strategic calls under uncertainty",
+            "Creates momentum on high-impact bets",
+            "Communicates rationale with clarity"
+          ],
+          "dimensions": {
+            "d1": "discovery",
+            "d2": "strategic",
+            "d3": "decider"
+          },
+          "dimensionLabels": {
+            "d1": "Discovery",
+            "d2": "Strategic",
+            "d3": "Decider"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "discovery",
+            "scores": {
+              "discovery": 3,
+              "delivery": 2
+            },
+            "percentages": {
+              "discovery": 60,
+              "delivery": 40
+            },
+            "certainty": 60,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "strategic",
+            "scores": {
+              "strategic": 2,
+              "tactical": 2
+            },
+            "percentages": {
+              "strategic": 50,
+              "tactical": 50
+            },
+            "certainty": 50,
+            "tieResolvedBy": "tie_breaker"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "decider",
+            "scores": {
+              "facilitator": 2,
+              "decider": 2
+            },
+            "percentages": {
+              "facilitator": 50,
+              "decider": 50
+            },
+            "certainty": 50,
+            "tieResolvedBy": "tie_breaker"
+          }
+        },
+        "confidence": 54,
+        "confidenceBand": "Low"
+      }
+    },
+    "673a617b-cdd8-454f-934b-0c14e326f2b2": {
+      "sessionId": "673a617b-cdd8-454f-934b-0c14e326f2b2",
+      "track": "b2b",
+      "personaId": "b2b_bet_builder",
+      "dimensionWinners": {
+        "d1": "delivery",
+        "d2": "strategic",
+        "d3": "decider"
+      },
+      "confidence": 77,
+      "createdAt": "2026-02-21T04:36:10.434Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_bet_builder",
+          "track": "b2b",
+          "name": "Bet Builder",
+          "summary": "You operate with high conviction on strategic bets and keep execution accountable to outcomes.",
+          "strengths": [
+            "Commits decisively to high-leverage initiatives",
+            "Prioritizes ruthlessly against product thesis",
+            "Removes decision bottlenecks",
+            "Drives accountable execution to outcomes"
+          ],
+          "dimensions": {
+            "d1": "delivery",
+            "d2": "strategic",
+            "d3": "decider"
+          },
+          "dimensionLabels": {
+            "d1": "Delivery",
+            "d2": "Strategic",
+            "d3": "Decider"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "delivery",
+            "scores": {
+              "discovery": 1,
+              "delivery": 4
+            },
+            "percentages": {
+              "discovery": 20,
+              "delivery": 80
+            },
+            "certainty": 80,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "strategic",
+            "scores": {
+              "strategic": 3,
+              "tactical": 1
+            },
+            "percentages": {
+              "strategic": 75,
+              "tactical": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "decider",
+            "scores": {
+              "facilitator": 1,
+              "decider": 3
+            },
+            "percentages": {
+              "facilitator": 25,
+              "decider": 75
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          }
+        },
+        "confidence": 77,
+        "confidenceBand": "Medium"
+      }
+    },
+    "03a72279-2cfa-43c3-b230-0d5e9e072d43": {
+      "sessionId": "03a72279-2cfa-43c3-b230-0d5e9e072d43",
+      "track": "b2c",
+      "personaId": "b2c_trust_visionary",
+      "dimensionWinners": {
+        "d1": "learning-first",
+        "d2": "experience-first",
+        "d3": "decider"
+      },
+      "confidence": 85,
+      "createdAt": "2026-02-21T21:02:30.577Z",
+      "computed": {
+        "track": "b2c",
+        "persona": {
+          "id": "b2c_trust_visionary",
+          "track": "b2c",
+          "name": "Trust Visionary",
+          "summary": "You lead with principled judgment, pairing user trust with decisive action at critical moments.",
+          "strengths": [
+            "Makes principled calls on safety and experience",
+            "Spots trust risks early",
+            "Sets clear quality and ethics standards",
+            "Balances brand integrity with product velocity"
+          ],
+          "dimensions": {
+            "d1": "learning-first",
+            "d2": "experience-first",
+            "d3": "decider"
+          },
+          "dimensionLabels": {
+            "d1": "Learning-first",
+            "d2": "Experience-first",
+            "d3": "Decider"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how strongly your choices consistently favored one side in each consumer PM dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Learning-first vs Shipping-first",
+            "winner": "learning-first",
+            "scores": {
+              "learning-first": 4,
+              "shipping-first": 1
+            },
+            "percentages": {
+              "learning-first": 80,
+              "shipping-first": 20
+            },
+            "certainty": 80,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Experience-first vs Growth-first",
+            "winner": "experience-first",
+            "scores": {
+              "experience-first": 3,
+              "growth-first": 1
+            },
+            "percentages": {
+              "experience-first": 75,
+              "growth-first": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "decider",
+            "scores": {
+              "facilitator": 0,
+              "decider": 4
+            },
+            "percentages": {
+              "facilitator": 0,
+              "decider": 100
+            },
+            "certainty": 100,
+            "tieResolvedBy": "score"
+          }
+        },
+        "confidence": 85,
+        "confidenceBand": "High"
+      }
+    },
+    "bc626dcc-18ff-49a8-8818-24db5e0c65cd": {
+      "sessionId": "bc626dcc-18ff-49a8-8818-24db5e0c65cd",
+      "track": "b2b",
+      "personaId": "b2b_insight_architect",
+      "dimensionWinners": {
+        "d1": "discovery",
+        "d2": "strategic",
+        "d3": "facilitator"
+      },
+      "confidence": 70,
+      "createdAt": "2026-02-21T21:05:17.963Z",
+      "computed": {
+        "track": "b2b",
+        "persona": {
+          "id": "b2b_insight_architect",
+          "track": "b2b",
+          "name": "Insight Architect",
+          "summary": "You thrive when ambiguity is high and strategic clarity must be built from real customer evidence.",
+          "strengths": [
+            "Uncovers root customer problems early",
+            "Connects qualitative signals to strategic bets",
+            "Aligns teams with shared decision criteria",
+            "Reduces rework through upfront validation"
+          ],
+          "dimensions": {
+            "d1": "discovery",
+            "d2": "strategic",
+            "d3": "facilitator"
+          },
+          "dimensionLabels": {
+            "d1": "Discovery",
+            "d2": "Strategic",
+            "d3": "Facilitator"
+          },
+          "confidenceExplanationTemplate": "Confidence is {{band}} based on how consistently your answers favored one side in each dimension."
+        },
+        "dimensions": {
+          "d1": {
+            "id": "d1",
+            "name": "Discovery vs Delivery",
+            "winner": "discovery",
+            "scores": {
+              "discovery": 4,
+              "delivery": 1
+            },
+            "percentages": {
+              "discovery": 80,
+              "delivery": 20
+            },
+            "certainty": 80,
+            "tieResolvedBy": "score"
+          },
+          "d2": {
+            "id": "d2",
+            "name": "Strategic vs Tactical",
+            "winner": "strategic",
+            "scores": {
+              "strategic": 3,
+              "tactical": 1
+            },
+            "percentages": {
+              "strategic": 75,
+              "tactical": 25
+            },
+            "certainty": 75,
+            "tieResolvedBy": "score"
+          },
+          "d3": {
+            "id": "d3",
+            "name": "Facilitator vs Decider",
+            "winner": "facilitator",
+            "scores": {
+              "facilitator": 2,
+              "decider": 2
+            },
+            "percentages": {
+              "facilitator": 50,
+              "decider": 50
+            },
+            "certainty": 50,
+            "tieResolvedBy": "tie_breaker"
+          }
+        },
+        "confidence": 70,
+        "confidenceBand": "Medium"
+      }
+    }
+  },
+  "shares": {
+    "US2njtaBxMb": {
+      "slug": "US2njtaBxMb",
+      "sessionId": "05261e39-4e00-4697-93e5-3f862f2fe1db",
+      "createdAt": "2026-02-21T03:47:40.883Z",
+      "views": 0
+    },
+    "mbBMjXTio92": {
+      "slug": "mbBMjXTio92",
+      "sessionId": "bc626dcc-18ff-49a8-8818-24db5e0c65cd",
+      "createdAt": "2026-02-21T21:05:32.965Z",
+      "views": 0
+    }
+  }
+}
