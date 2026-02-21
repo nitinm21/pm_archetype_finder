@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "NEXT_DIST_DIR=.next-dev next dev",
-    "build": "NEXT_DIST_DIR=.next-prod next build",
-    "start": "NEXT_DIST_DIR=.next-prod next start",
+    "build": "next build",
+    "start": "next start",
+    "build:prod": "NEXT_DIST_DIR=.next-prod next build",
+    "start:prod": "NEXT_DIST_DIR=.next-prod next start",
     "lint": "next lint"
   },
   "dependencies": {
